@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.ResultQR">
+    <ContentPage.Content>
+
+        <Grid  HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <!-- <RowDefinition Height="70"></RowDefinition>-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Text="KẾT QUẢ"
+                   VerticalTextAlignment="Center"
+                   FontSize="30" 
+                   TextColor="Navy" 
+                   HorizontalOptions="CenterAndExpand" 
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+            <BoxView BackgroundColor="#c7e6f5" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Work No:" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="1" Grid.Column="0"/>
+            <BoxView BackgroundColor="#c7e6f5" Grid.Row="1" Grid.Column="1"/>
+            <Label x:Name="lbWorkNo" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Red" 
+                   FontAttributes="Bold" FontSize="Medium"
+                   Grid.Row="1" Grid.Column="1"
+                   />
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="2" Grid.Column="0"/>
+            <Label Text="Khách Hàng:" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="2" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="2" Grid.Column="1"/>
+            <Label x:Name="lblCustomer" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Red" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium"  
+                   Grid.Row="2" Grid.Column="1"/>
+
+            <BoxView BackgroundColor="#c7e6f5"
+                     Grid.Row="3" Grid.Column="0"/>
+            <Label Text="Mùa:" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue"  
+                   Grid.Row="3" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="3" Grid.Column="1"/>
+            <Label x:Name="lblSeason" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Red" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="3" Grid.Column="1"/>
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="4" Grid.Column="0"/>
+            <Label Text="Đơn Hàng:" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="4" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="4" Grid.Column="1"/>
+            <Label x:Name="lblOrder" 
+                   VerticalTextAlignment="Center"
+                   
+                   TextColor="Red"
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="4" Grid.Column="1"/>
+
+            <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="5" Grid.Column="0"/>
+            <Label Text="Mã Hàng:" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue"  
+                   Grid.Row="5" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="5" Grid.Column="1"/>
+            <Label x:Name="lblstyle" 
+                   VerticalTextAlignment="Center"
+                  
+                   TextColor="Red" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="5" Grid.Column="1"/>
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="6" Grid.Column="0"/>
+            <Label Text="Màu:" FontSize="Medium"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="6" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="6" Grid.Column="1"/>
+            <Label x:Name="lblcolor" 
+                   VerticalTextAlignment="Center"
+                    
+                   TextColor="Red" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="6" Grid.Column="1"/>
+
+            <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="7" Grid.Column="0"/>
+            <Label Text="Size:" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="7" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="7" Grid.Column="1"/>
+            <Label x:Name="lblSize" 
+                   VerticalTextAlignment="Center"                   
+                   TextColor="Red" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="7" Grid.Column="1"/>
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="8" Grid.Column="0"/>
+            <Label Text="PO:" FontSize="Medium" 
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="8" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="White" 
+                     Grid.Row="8" Grid.Column="1"/>
+            <Label x:Name="lblPO"                    
+                   VerticalTextAlignment="Center"
+                   TextColor="Red" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium"
+                   Grid.Row="8" Grid.Column="1"/>
+
+
+            <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="9" Grid.Column="0"/>
+            <Label Text="Số QR:" FontSize="Medium" 
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="9" Grid.Column="0"/>
+
+            <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="9" Grid.Column="1"/>
+            <Label x:Name="lblnumberQR"                    
+                   VerticalTextAlignment="Center"
+                   TextColor="Red" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium"
+                   Grid.Row="9" Grid.Column="1"/>
+
+
+
+            <BoxView BackgroundColor="White"  Margin="10"
+                     Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"
+                     />
+            <Button x:Name="lblMessage"
+                    Margin="10"
+                    FontSize="Medium"
+                    BackgroundColor="White"
+                    Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"
+                    TextColor="Red"
+                   />
+
+           
+             <BoxView BackgroundColor="Transparent" 
+                     Grid.Row="11" 
+                     Grid.Column="0" 
+                     />
+            
+            <Frame CornerRadius="10"  
+                                       x:Name="btnSave"
+                                       OutlineColor="Green"
+                                       HorizontalOptions="CenterAndExpand"
+                                       WidthRequest="150"
+                                       HeightRequest="30"
+                                       Padding="10"
+                                       Grid.Row="11" Grid.Column="0" 
+                                       >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnSaved_Clicked"/>
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="White"
+                                         HeightRequest="30"
+                     
+                                         Padding="0">
+
+                    <Label Text="Lưu"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+
+                    <ImageButton Source="save.png"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                         WidthRequest="15"
+                                         BackgroundColor="White"/>
+                </StackLayout>
+            </Frame>
+            
+            <BoxView BackgroundColor="Transparent" 
+                     Grid.Row="11" Grid.Column="1" />
+
+            <Frame CornerRadius="10"  
+                                       OutlineColor="Yellow"
+                                       HorizontalOptions="CenterAndExpand"
+                                       WidthRequest="150"
+                                       HeightRequest="30"
+                                       Padding="10"
+                                       Grid.Row="11" Grid.Column="1" 
+                                       >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnNext_Clicked"/>
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="White"
+                                         HeightRequest="30"
+                     
+                                         Padding="0">
+
+                    <Label Text="Tiếp Tục"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+
+                    <ImageButton Source="continue16.png"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                         WidthRequest="15"
+                                         BackgroundColor="White"/>
+                </StackLayout>
+            </Frame>
+            
+        </Grid>
+       
+
+    </ContentPage.Content>
+</ContentPage>

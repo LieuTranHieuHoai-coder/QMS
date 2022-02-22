@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:gv="clr-namespace:GoogleVisionBarCodeScanner;assembly=BarcodeScanner.XF"
+             x:Class="QMS.ScanQR" Title="Sewing Output">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout >
+                <Label Text="Truy Vấn Sản Lượng Chuyền May" 
+                       FontSize="Large" 
+                       FontAttributes="Bold" 
+                       HorizontalTextAlignment="Center"
+                       TextColor="Blue"></Label>                
+            </StackLayout>
+            <ScrollView>                
+                <gv:CameraView  HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                               VibrationOnDetected="True"
+                               OnDetected="CameraView_OnDetectedAsync"                                
+                               DefaultTorchOn="False"                                
+                               AutoStartScanning="True" 
+                               RequestedFPS="30" 
+                               ScanInterval="300"  
+                               WidthRequest="300"                            
+                               HeightRequest="550"                               
+                               x:Name="camerascan"                               
+                               />
+            </ScrollView>
+           <!-- <Label Text="" HorizontalOptions="Center"  FontAttributes="Bold"></Label>-->
+            <Frame Padding="5" Margin="5" BackgroundColor="#83be62" BorderColor="Green" CornerRadius="5">
+                <StackLayout >
+                    <Label Text="Nhập Mã Số QR:" 
+                            TextColor="Black"  
+                            FontAttributes="Bold"
+                            ></Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Frame BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" >
+                            <Grid HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition ></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="110"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <BoxView Grid.Row="0" Grid.Column="0" />
+                                <Entry x:Name="txtqrcode" 
+                                            PlaceholderColor="DarkOrange" 
+                                            Placeholder="Nhập QR"                                           
+                                            Keyboard="Numeric" 
+                                            FontSize="Medium"                                                                        
+                                            Grid.Row="0" Grid.Column="0"
+                                           HorizontalOptions="FillAndExpand"/>
+                               <!-- <Entry Keyboard="Numeric"
+                                       Grid.Row="0" Grid.Column="0"
+                                       x:Name="txtqrcode"
+                                       
+                                       />-->
+                                <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent"></BoxView>
+                                <!--<Button x:Name="btnscan" 
+                                        Text="QUÉT" 
+                                        TextColor="Red"
+                                        BorderColor="Blue"
+                                        BorderWidth="1"
+                                        BackgroundColor="Yellow"
+                                        CornerRadius="5"
+                                        Clicked="btnscan_Clicked"
+                                        Grid.Row="0" Grid.Column="1"/>-->
+                                <Frame CornerRadius="10"  
+                                       OutlineColor="Cyan"
+                                       HorizontalOptions="CenterAndExpand"
+                                       WidthRequest="120"
+                                       HeightRequest="30"
+                                       Padding="10"
+                                       Grid.Row="0" Grid.Column="1"
+                                       >
+                                                    <Frame.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="btnscan_Clicked"/>
+                                                    </Frame.GestureRecognizers>
+                                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="White"
+                                         HeightRequest="30"
+                     
+                                         Padding="0">
+
+                                                        <Label Text="Quét"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+
+                                        <ImageButton Source="search.png"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                         WidthRequest="15"
+                                         BackgroundColor="White"/>
+                                    </StackLayout>
+                                </Frame>
+
+                            </Grid>
+
+                        </Frame>
+                    </StackLayout>
+                    
+                    <Frame CornerRadius="10"  
+                                       OutlineColor="Red"
+                                       HorizontalOptions="FillAndExpand"
+                                       
+                                       HeightRequest="30"
+                                       Padding="10"
+                                       Grid.Row="0" Grid.Column="1"
+                                       >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="btnBack_Clicked"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="White"
+                                         HeightRequest="30"
+                     
+                                         Padding="0">
+
+                            <Label Text="Quay Lại"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+
+                            <ImageButton Source="leftarrow.png"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                         WidthRequest="15"
+                                         BackgroundColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                    <!--<Button Text="Quay Lại"
+                            BackgroundColor="DarkKhaki"
+                            CornerRadius="10" TextColor="Blue" 
+                            BorderColor="White"
+                            x:Name="btnBack" Clicked="btnBack_Clicked"></Button>-->
+                </StackLayout>
+            </Frame>             
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

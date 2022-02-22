@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.MainPage" BackgroundColor="#83be62">
+
+    <StackLayout Orientation="Vertical"  Spacing="10" Padding="5">
+       
+        <BoxView HeightRequest="70"/>
+        <Image HeightRequest="200" HorizontalOptions="Center" Source="logoLogin.png" />
+        <!--<Label Text="QMS" 
+                          FontSize="100" 
+                          HorizontalOptions="Center" 
+                          TextColor="White" 
+                          TextTransform="Uppercase" 
+                          FontAttributes="Bold"
+               FontFamily="Bodoni"/>-->
+        <Frame BackgroundColor="#BFcecece" HasShadow="False"  VerticalOptions="Fill" BorderColor="Yellow" CornerRadius="5" >
+            <StackLayout Spacing="10" Orientation="Vertical">
+            <Label Text="Tên Người Dùng:" FontAttributes="Bold"></Label>                
+            <Entry x:Name="txtuser" 
+                   TextColor="Blue" Placeholder="Username"/>                
+            <Label Text="Mật Khẩu:" FontAttributes="Bold"></Label>                
+
+                <Entry IsPassword="True" 
+                       TextColor="Black" 
+                       Placeholder="Password" 
+                       x:Name="txtpassword"/>
+                
+                <Image  HorizontalOptions="End" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ShowPass" NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>                   
+            </StackLayout>
+        </Frame>
+        <!--<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button x:Name="btnlogin" Text="ĐĂNG NHẬP" BorderWidth="1" 
+                            BorderColor="Red" 
+                            WidthRequest="150"  
+                            BackgroundColor="White"
+                            CornerRadius="10"
+                            TextColor="Red" Clicked="Btnlogin_ClickedAsync">
+            </Button>            
+        </StackLayout>-->
+        
+        
+        <Frame CornerRadius="10"  
+               OutlineColor="Red"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="150"
+               HeightRequest="30"
+               Padding="10"
+               >
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Btnlogin_ClickedAsync"/>
+            </Frame.GestureRecognizers>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="White"
+                     HeightRequest="30"
+                     
+                     Padding="0">
+                
+                <Label Text="ĐĂNG NHẬP"
+               FontSize="15"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+
+                <ImageButton Source="icon_enter.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                         WidthRequest="15"
+                         BackgroundColor="White"/>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+            <Label Text="© 2022 Quảng Việt Củ Chi" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+            <Label x:Name="lbltime" TextColor="Brown" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontAttributes="Bold"/>
+        </StackLayout>
+        
+       
+    </StackLayout>   
+</ContentPage>
